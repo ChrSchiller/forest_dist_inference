@@ -64,13 +64,13 @@ The arguments used in the code are:
 Here's an example of running the script `inference_on_single_force_tile` (single FORCE tile prediction) with a specific end date of the input time series and a specific tile: 
 
 ```
-python ./inference_on_single_force_tile.py --tile_name X0058_Y0058 --end_date 20240930 [add the path arguments here]
+python inference_on_single_force_tile.py --tile_name X0058_Y0058 --end_date 20240930 [add the path arguments here]
 ```
 
 And here's an example of running the script `inference_on_all_force_tiles.py` (prediction on all available FORCE tiles containing forest) with the latest Sentinel-2 observation as end date: 
 
 ```
-python ./inference_on_all_force_tiles.py [add the path arguments here]
+python inference_on_all_force_tiles.py [add the path arguments here]
 ```
 
 For an operational forest monitoring system, the script `inference_on_all_force_tiles.py` can be run regularly, e.g. every five days (revisit time of Sentinel-2) using a cronjob or systemd timer. An example on how to do this (naively, with a specific sleep time assuming a FORCE datacube update time of five days) is given in the next chapter. 
